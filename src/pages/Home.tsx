@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@evoapi/design-system/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@evoapi/design-system/card";
+import { Badge } from "@evoapi/design-system/badge";
 import { ArrowRight, Github, Globe, Mail, Shield } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "@/components/theme-provider";
@@ -92,7 +92,7 @@ export default function Home() {
             <CardContent>
               <div className="grid md:grid-cols-3 gap-4">
                 <a
-                  href="https://github.com/EvolutionAPI/evolution-manager-v2"
+                  href="https://github.com/evolution-foundation/evolution-manager-v2"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-4 rounded-lg border border-border hover:bg-accent transition-colors"
@@ -105,7 +105,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="https://evolution-api.com"
+                  href="https://evolutionfoundation.com.br"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-4 rounded-lg border border-border hover:bg-accent transition-colors"
@@ -118,7 +118,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="mailto:contato@evolution-api.com"
+                  href="mailto:suporte@evofoundation.com.br"
                   className="flex items-center gap-3 p-4 rounded-lg border border-border hover:bg-accent transition-colors"
                 >
                   <Mail className="w-5 h-5 text-muted-foreground" />

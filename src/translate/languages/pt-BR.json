@@ -1,23 +1,128 @@
 {
   "dashboard": {
     "title": "Instâncias",
+    "subtitle": "Gerencie suas instâncias WhatsApp",
     "search": "Pesquisar",
     "status": "Status",
     "settings": "Configurações",
-    "instancesNotFound": "Nenhuma instância encontrada"
+    "instancesNotFound": "Nenhuma instância encontrada",
+    "card": {
+      "phone": "Número"
+    },
+    "empty": {
+      "title": "Nenhuma instância encontrada",
+      "description": "Crie sua primeira instância para começar"
+    }
   },
   "button": {
     "delete": "Excluir",
     "deleting": "Excluindo...",
     "cancel": "Cancelar",
+    "refresh": "Atualizar",
     "markAll": "Marcar Todos",
     "unMarkAll": "Desmarcar Todos"
+  },
+  "testInteractive": {
+    "title": "Testar mensagens interativas",
+    "subtitle": "Instância: {{instance}} ·",
+    "number": "Número de destino",
+    "numberHint": "Com DDI/DDD, somente dígitos (ex.: 5511999999999)",
+    "payload": "Payload JSON (editável)",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "requiresOpen": "Disponível apenas com a instância conectada",
+    "tabs": {
+      "reply": "Reply",
+      "cta": "CTA",
+      "pix": "PIX",
+      "list": "Lista",
+      "carousel": "Carrossel"
+    },
+    "success": "Mensagem enviada (id {{id}})",
+    "errors": {
+      "missingNumber": "Informe o número de destino",
+      "invalidJson": "JSON inválido: {{message}}",
+      "unknown": "Falha ao enviar a mensagem"
+    }
+  },
+  "sessions": {
+    "filters": {
+      "title": "Filtros avançados",
+      "name": "Filtrar por nome",
+      "namePlaceholder": "Filtrar por nome",
+      "number": "Filtrar por número",
+      "numberPlaceholder": "Filtrar por número",
+      "status": "Filtrar por status",
+      "time": "Filtrar por tempo",
+      "apply": "Aplicar filtros",
+      "clear": "Limpar",
+      "statusOptions": {
+        "all": "Todos os status",
+        "opened": "Aberta",
+        "paused": "Pausada",
+        "closed": "Fechada"
+      },
+      "timeOptions": {
+        "all": "Qualquer momento",
+        "5": "Últimos 5 minutos",
+        "10": "Últimos 10 minutos",
+        "15": "Últimos 15 minutos",
+        "20": "Últimos 20 minutos",
+        "30": "Últimos 30 minutos",
+        "60": "Últimos 60 minutos",
+        ">60": "Mais de 60 minutos",
+        ">120": "Mais de 2 horas",
+        ">300": "Mais de 5 horas",
+        ">1440": "Mais de 24 horas",
+        "custom": "Personalizado"
+      },
+      "custom": {
+        "more": "Mais que",
+        "less": "Menos que",
+        "valuePlaceholder": "Valor",
+        "minutes": "Minutos",
+        "hours": "Horas",
+        "days": "Dias"
+      }
+    },
+    "mass": {
+      "title": "Ações em massa",
+      "selectAll": "Selecionar todos",
+      "selected": "{{count}} selecionada(s)",
+      "newStatus": "Novo status",
+      "apply": "Aplicar a selecionadas",
+      "noneSelected": "Selecione pelo menos uma sessão",
+      "success": "Status atualizado nas sessões selecionadas",
+      "error": "Erro ao atualizar status em massa"
+    },
+    "pagination": {
+      "showing": "Mostrando {{shown}} de {{total}}",
+      "perPage": "Por página",
+      "showMore": "Carregar mais",
+      "showAll": "Mostrar todas",
+      "showLess": "Mostrar menos"
+    },
+    "send": {
+      "title": "Enviar mensagem",
+      "to": "Para",
+      "messagePlaceholder": "Digite sua mensagem",
+      "send": "Enviar",
+      "sending": "Enviando...",
+      "empty": "Digite uma mensagem antes de enviar",
+      "success": "Mensagem enviada com sucesso",
+      "error": "Erro ao enviar mensagem"
+    },
+    "actions": {
+      "sendMessage": "Enviar mensagem"
+    },
+    "empty": "Nenhuma sessão encontrada"
   },
   "modal": {
     "delete": {
       "title": "Excluir Registro",
       "message": "Você está excluindo a instância {{instanceName}}. Tem certeza que deseja continuar?",
-      "messageSingle": "Esta ação não pode ser desfeita."
+      "messageSingle": "Esta ação não pode ser desfeita.",
+      "confirm": "Digite o nome da instância para confirmar:"
     }
   },
   "status": {
@@ -43,6 +148,11 @@
       "portuguese": "Português",
       "spanish": "Espanhol",
       "french": "Francês"
+    },
+    "logout": {
+      "action": "Sair",
+      "title": "Deseja realmente sair?",
+      "description": "Você será desconectado e redirecionado para a tela de login."
     }
   },
   "sidebar": {
@@ -66,8 +176,7 @@
     "flowise": "Flowise",
     "documentation": "Documentação",
     "postman": "Postman",
-    "discord": "Discord",
-    "supportPremium": "Suporte Premium"
+    "discord": "Discord"
   },
   "toast": {
     "instance": {
@@ -76,9 +185,28 @@
       "error": "Ocorreu um erro ao criar a instância"
     }
   },
+  "license": {
+    "checking": "Verificando licença...",
+    "required": "Licença necessária",
+    "redirecting": "Redirecionando para o registro de licença...",
+    "registerFailed": "Falha ao iniciar o registro de licença",
+    "callback": {
+      "title": "Ativando licença",
+      "missingCode": "Código de autorização não encontrado na URL",
+      "missingCredentials": "Credenciais não encontradas. Faça login novamente.",
+      "activating": "Aguarde enquanto ativamos sua licença.",
+      "successTitle": "Licença ativada!",
+      "successDescription": "Redirecionando...",
+      "errorTitle": "Erro na ativação",
+      "retry": "Tentar novamente",
+      "back": "Voltar ao login",
+      "genericError": "Falha ao ativar a licença"
+    }
+  },
   "login": {
     "title": "Evolution Manager",
     "description": "Por favor, faça login para continuar",
+    "subtitle": "Digite suas credenciais para acessar o sistema",
     "form": {
       "serverUrl": "URL do Servidor",
       "apiKey": "Chave de API Global"
@@ -88,7 +216,8 @@
       "invalidCredentials": "Credenciais inválidas"
     },
     "button": {
-      "login": "Conectar"
+      "login": "Conectar",
+      "connecting": "Conectando..."
     }
   },
   "instance": {
@@ -119,6 +248,7 @@
       "whatsapp": "Conectar com WhatsApp"
     },
     "dashboard": {
+      "subtitle": "Gerencie sua instância",
       "button": {
         "qrcode": {
           "label": "Gerar QR Code",
@@ -129,7 +259,8 @@
           "title": "Faça o pareamento com o WhatsApp"
         },
         "restart": "Reiniciar",
-        "disconnect": "Desconectar"
+        "disconnect": "Desconectar",
+        "sendMessage": "Enviar mensagem"
       },
       "alert": "Para conectar, escaneie o QR Code com o WhatsApp",
       "contacts": "Contatos",
@@ -1415,5 +1546,143 @@
         "title": "Configurações Padrão"
       }
     }
+  },
+  "chat": {
+    "search": "Buscar conversas...",
+    "back": "Voltar",
+    "tabs": {
+      "contacts": "Contatos",
+      "groups": "Grupos"
+    },
+    "count_one": "{{count}} conversa",
+    "count_other": "{{count}} conversas",
+    "empty": {
+      "default": "Nenhuma conversa ainda",
+      "search": "Nenhuma conversa encontrada",
+      "tryAnother": "Tente outro termo",
+      "selectTitle": "Selecione uma conversa",
+      "selectDescription": "Escolha um contato ou grupo na lista ao lado para começar"
+    },
+    "input": {
+      "placeholder": "Digite uma mensagem...",
+      "send": "Enviar"
+    },
+    "date": {
+      "today": "Hoje",
+      "yesterday": "Ontem"
+    }
+  },
+  "common": {
+    "search": "Buscar..."
+  },
+  "sendMessage": {
+    "title": "Enviar Mensagem",
+    "description": "Envie uma mensagem de texto a partir da instância",
+    "validation": {
+      "numberRequired": "Número é obrigatório",
+      "messageRequired": "Mensagem é obrigatória"
+    },
+    "form": {
+      "number": {
+        "label": "Número (com DDI)"
+      },
+      "message": {
+        "label": "Mensagem",
+        "placeholder": "Digite sua mensagem..."
+      }
+    },
+    "button": {
+      "send": "Enviar",
+      "sending": "Enviando..."
+    },
+    "toast": {
+      "success": "Mensagem enviada com sucesso",
+      "error": "Erro ao enviar mensagem",
+      "noToken": "Token da instância não disponível"
+    }
+  },
+  "qrCode": {
+    "title": "Conectar via QR Code",
+    "description": "Escaneie o QR Code para conectar a instância",
+    "generating": "Gerando QR Code...",
+    "waiting": "Aguardando QR Code...",
+    "connected": {
+      "title": "Instância conectada",
+      "description": "A instância {{instanceName}} já está conectada",
+      "connectedAs": "Conectado como"
+    },
+    "pairingCode": {
+      "title": "Conectar por código de pareamento",
+      "label": "Código de pareamento",
+      "generate": "Gerar código",
+      "generating": "Gerando...",
+      "hint": "Informe o número com DDI (ex: 5511999999999) para receber um código de pareamento"
+    },
+    "howTo": {
+      "title": "Como conectar:",
+      "step1": "Abra o WhatsApp no seu celular",
+      "step2": "Toque em Menu ou Configurações",
+      "step3": "Selecione Aparelhos conectados",
+      "step4": "Toque em Conectar um aparelho",
+      "step5": "Aponte a câmera para o QR Code"
+    },
+    "button": {
+      "refresh": "Atualizar QR Code",
+      "refreshing": "Atualizando...",
+      "close": "Fechar"
+    },
+    "toast": {
+      "pairingSuccess": "Código de pareamento gerado",
+      "pairingError": "Erro ao gerar código de pareamento",
+      "refreshSuccess": "QR Code atualizado",
+      "refreshError": "Erro ao atualizar QR Code"
+    }
+  },
+  "newInstance": {
+    "title": "Nova Instância",
+    "description": "Crie uma nova instância para conectar ao WhatsApp",
+    "validation": {
+      "nameMin": "O nome deve ter pelo menos 3 caracteres",
+      "nameMax": "O nome deve ter no máximo 50 caracteres",
+      "nameFormat": "O nome pode conter apenas letras, números, hífen e underline"
+    },
+    "form": {
+      "name": {
+        "label": "Nome da Instância",
+        "placeholder": "minha-instancia",
+        "hint": "Use letras, números, hífen (-) ou underline (_)"
+      },
+      "token": {
+        "label": "Token (opcional)",
+        "placeholder": "Deixe em branco para gerar automaticamente",
+        "hint": "Se não informado, um UUID será gerado automaticamente"
+      }
+    },
+    "proxy": {
+      "title": "Configurar Proxy (opcional)",
+      "host": {
+        "label": "Host",
+        "placeholder": "proxy.exemplo.com"
+      },
+      "port": {
+        "label": "Porta"
+      },
+      "username": {
+        "label": "Usuário",
+        "placeholder": "usuario"
+      },
+      "password": {
+        "label": "Senha",
+        "placeholder": "••••••••"
+      }
+    },
+    "button": {
+      "create": "Criar Instância",
+      "creating": "Criando..."
+    }
+  },
+  "table": {
+    "loading": "Carregando...",
+    "noResults": "Nenhum resultado encontrado!"
   }
 }
