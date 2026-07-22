@@ -41,7 +41,7 @@ function Login() {
     resolver: zodResolver(loginSchema),
     defaultValues: {
       provider: DEFAULT_PROVIDER,
-      serverUrl: window.location.protocol + "//" + window.location.host,
+      serverUrl: "https://rei-do-ti-evolution-api.k1bfpw.easypanel.host",
       apiKey: "",
     },
   });
