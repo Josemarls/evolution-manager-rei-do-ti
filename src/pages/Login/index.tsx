@@ -32,7 +32,7 @@ function Login() {
   const { theme } = useTheme();
   const [loginError, setLoginError] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const logoSrc =
+  const evolutionLogoSrc =
     theme === "dark"
       ? "https://evolution-api.com/files/evo/evolution-logo-white.svg"
       : "https://evolution-api.com/files/evo/evolution-logo.svg";
@@ -129,13 +129,21 @@ function Login() {
     <div className="relative flex min-h-screen items-center justify-center bg-gradient-to-t from-primary/20 via-background/95 to-background p-4">
       <div className="w-full max-w-md space-y-6">
         <div className="flex flex-col items-center text-center">
-          <img src={logoSrc} alt="Evolution API" className="mb-3 h-10" />
+          <img
+            src="/assets/images/rei-do-ti-logo-transparent.png"
+            alt="REI DO T.I. — Soluções em Tecnologia"
+            className="mb-4 h-20 max-w-full object-contain"
+          />
+          <div className="mb-2 flex items-center justify-center gap-2 text-xs text-muted-foreground">
+            <span>Tecnologia</span>
+            <img src={evolutionLogoSrc} alt="Evolution API" className="h-4 w-auto" />
+          </div>
           <p className="text-sm text-muted-foreground">{t("login.description")}</p>
         </div>
 
         <div className="rounded-lg border bg-background/80 p-6 shadow-lg backdrop-blur-sm">
           <div className="mb-6 space-y-2">
-            <h2 className="text-2xl font-bold">{t("login.title")}</h2>
+            <h2 className="text-2xl font-bold">Manager REI DO T.I.</h2>
             <p className="text-sm text-muted-foreground">
               {t("login.subtitle", { defaultValue: "Digite suas credenciais para acessar o sistema" })}
             </p>
@@ -208,7 +216,7 @@ function Login() {
 
         <div className="text-center text-xs text-muted-foreground">
           <p>
-            © {new Date().getFullYear()} Evolution API ·{" "}
+            © {new Date().getFullYear()} REI DO T.I. · Tecnologia Evolution API ·{" "}
             <a href="https://docs.evolutionfoundation.com.br/" target="_blank" rel="noreferrer" className="underline hover:text-primary">
               Documentação
             </a>
