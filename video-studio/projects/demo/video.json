@@ -1,0 +1,37 @@
+{
+  "brand": "REI DO TI",
+  "format": "9:16",
+  "style": "kinetic",
+  "voice": "faber",
+  "scenes": [
+    {
+      "narration": "Dá para criar um vídeo inteiro a partir de uma ideia, sem gravar e sem abrir editor.",
+      "kicker": "Estúdio de vídeo",
+      "headline": "Vídeo inteiro de *uma ideia*",
+      "visual": { "type": "chips", "strike": true, "items": ["gravar", "editar", "narrar", "legendar"] }
+    },
+    {
+      "narration": "Você escreve o tema, e o estúdio escreve o roteiro, cena por cena.",
+      "kicker": "Passo 1",
+      "headline": "Você dá *o tema*",
+      "visual": { "type": "terminal", "lines": ["> tema: por que o mar é salgado", "roteiro: 6 cenas", "duração: 48 segundos"] }
+    },
+    {
+      "narration": "Depois ele grava a narração, sincroniza a legenda palavra por palavra, e anima cada cena.",
+      "kicker": "Passo 2",
+      "headline": "Ele faz *o resto*",
+      "visual": { "type": "steps", "items": ["Narração", "Legenda *sincronizada*", "Animação"] }
+    },
+    {
+      "narration": "Tudo roda no computador, sem chave de API e sem mensalidade.",
+      "kicker": "Custo",
+      "headline": "Roda *local*",
+      "visual": { "type": "checklist", "items": ["Sem chave de API", "Sem mensalidade", "Vertical e horizontal"] }
+    },
+    {
+      "narration": "Este vídeo foi feito assim, do roteiro ao arquivo final.",
+      "kicker": "Rei do TI",
+      "headline": "Feito *no automático*"
+    }
+  ]
+}

@@ -4,10 +4,38 @@ Data: 16/11/2026. Objetivo: mapear o que existe para montarmos aqui um fluxo ava
 
 ## Limites desta pesquisa
 
-- **O vídeo do Instagram não foi lido.** O host `www.instagram.com` não resolve nesta sessão na nuvem, então não sei quais ferramentas ele cita. Tudo abaixo vem do catálogo de plugins/conectores da conta e de busca na web.
-- **Nenhuma skill de vídeo nem de "buscar skills" apareceu nesta sessão.** O repositório não tem pasta `.claude/` e a lista de skills da conta só traz as padrão. Se elas foram instaladas no computador local (por exemplo com `npx skills add`), ficaram lá e não vêm para a sessão na nuvem.
 - Preços e números de instalação vêm de blogs, agregadores e revendedores de API. São indicativos; confirmar na página oficial antes de contratar.
 - As skills da comunidade (seção 3) não foram auditadas. Ler os scripts antes de rodar.
+- Nenhuma skill de vídeo nem de "buscar skills" apareceu na sessão na nuvem; usei a busca de skills, plugins e conectores da própria conta.
+
+## 0. O concorrente analisado: "Estúdio de Vídeos Automáticos" (@yurizandotv)
+
+Fontes: o anúncio em vídeo (57 s, transcrito aqui) e a página de vendas `estudio-videos.pages.dev/guia297`.
+
+**O que ele vende.** Um painel que roda no PC (Windows 10/11, abre no navegador), R$ 297 em pagamento único, entregue pela Kiwify com videoaulas de monetização ("Código Renda Digital"). Garantia de 7 dias.
+
+**O que o painel faz, segundo o anúncio.** Você escreve a ideia ou cola o link de um vídeo que deu certo. Ele escreve o roteiro cena por cena, cria um personagem e o mantém igual no vídeo inteiro, gera e anima cada cena, coloca voz, música e legenda, refaz uma cena quando você pede, entrega título, descrição, tags e thumbnail, e tira a versão vertical do mesmo tema.
+
+**Como funciona por baixo, segundo a página.** "Não precisa de chave de API. Os estilos da aba 'Estilos IA' usam a sua assinatura do Claude (Pro ou Max) ou do Codex." Ou seja: não há vídeo generativo. É o Claude escrevendo animações em código, com narração e legenda automáticas e render local. Os mais de 150 "estilos" são templates e skills (quadro a quadro, mão desenhando, mascote pixel, HUD cyberpunk, colagem, kinetic, isométrico, line art, mapas, iceberg, bonecos 2D).
+
+**Formatos que ele mostra.** Reels e Shorts 9:16 e vídeos longos 16:9 para canal dark: mapas e geopolítica, comparação de tamanhos em 3D, iceberg, curiosidades, histórias do Reddit, psicologia, finanças.
+
+**Conclusão.** É a mesma arquitetura da "base local" recomendada na seção 6. O diferencial dele é a biblioteca de estilos e o painel, não uma tecnologia que não temos.
+
+| Capacidade dele | Nosso estúdio (`video-studio/`) hoje |
+|---|---|
+| Roteiro cena por cena a partir do tema | Sim (Claude escreve o `video.json`) |
+| Narração automática | Sim, uma voz pt-BR local (Piper) |
+| Legenda sincronizada palavra a palavra | Sim (Whisper) |
+| Animação de cada cena | Sim, um estilo (`kinetic`) |
+| Versão vertical e horizontal do mesmo roteiro | Sim (`--format`) |
+| Refazer uma cena a pedido | Sim, editando o JSON e renderizando de novo |
+| +150 estilos | Não: 1 estilo |
+| Personagem consistente, cenas ilustradas | Não |
+| Música | Não |
+| Título, descrição, tags, thumbnail | Não automatizado |
+| Clonar o estilo de um vídeo por link | Não |
+| Painel no navegador | Não: uso pelo chat ou linha de comando |
 
 ## 1. O que já temos no ambiente
 
@@ -93,7 +121,6 @@ Para pauta e distribuição: vidIQ (o que está performando) e Windsor.ai for So
 
 ## 7. Decisões pendentes
 
-- Quais ferramentas o vídeo do Instagram cita (colar a legenda ou os nomes).
 - Remotion (React, ecossistema maior) ou HyperFrames (HTML, mais simples) como motor de motion graphics.
 - Este repositório é o Evolution Manager (painel da Evolution API). Vale decidir se o fluxo de vídeo fica aqui em uma pasta própria ou em um repositório dedicado.
 - Trazer para o repositório (`.claude/skills/`) a skill de edição já criada, para ela existir também nas sessões na nuvem.
