@@ -37,6 +37,24 @@ Fontes: o anúncio em vídeo (57 s, transcrito aqui) e a página de vendas `estu
 | Clonar o estilo de um vídeo por link | Não |
 | Painel no navegador | Não: uso pelo chat ou linha de comando |
 
+## 0b. Segundo concorrente: "Fábrica de Conteúdo com IA" (Ninja das Automações)
+
+Fontes: anúncio em vídeo (24 s) e a página `fabrica.ninjadasautomacoes.com.br`.
+
+**O que ele vende.** Um `.zip` de skills para Claude Code ou Codex, R$ 67 em pagamento único (a página também cita R$ 97). Categoria diferente do primeiro concorrente: aqui a pessoa **grava no celular e o agente edita**. Corte de silêncio e erro, legenda palavra por palavra, animações sobre a filmagem, fundo novo, capa. Inclui 6 estilos de edição, 20 de legenda, 12 modelos visuais, 218 animações, 34 efeitos sonoros e guia de prompts. Tudo roda local, sem crédito de ferramenta externa.
+
+**Os 16 efeitos do anúncio e o que cada um exige:**
+
+| Efeito | Técnica | Situação aqui |
+|---|---|---|
+| Parede de manchetes, texto adesivo, balão de comentário, mundo de interface | Sobreposição HTML sobre o vídeo | HyperFrames instalado; efeito a montar |
+| Mockup de celular, órbita | Vídeo dentro de moldura / cartões em 3D | Blocos no registro do HyperFrames |
+| Zoom digital, recuo que revela, antes e depois | Escala e máscara animadas | HyperFrames ou ffmpeg |
+| Zoom que atravessa | Transição com velocidade casada | Skill `cut-the-curve` instalada |
+| Tela verde / fundo novo, recorte de papel, quebra de moldura, rabisco tremido, camadas em profundidade, vertigem | Recorte da pessoa (segmentação) | `hyperframes remove-background` testado aqui: funciona, 2,6 quadros/s em CPU |
+
+**Conclusão.** A base técnica é aberta e já está instalada (HyperFrames, Apache-2.0). O que ele vende é o repertório pronto: os efeitos montados, os modelos visuais e o passo a passo. Esse repertório nós ainda não temos; cada efeito precisa ser montado e testado sobre uma gravação.
+
 ## 1. O que já temos no ambiente
 
 | Recurso | Situação |
